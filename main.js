@@ -53,9 +53,10 @@ function handleAdd() {
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
     address: document.getElementById("address").value,
-    // gender: getGender(),
-  };
-  students.push(student);
+    gender: getGender(),
+    };
+   
+    students.push(student);
   localStorage.setItem("students", JSON.stringify(students));
   renderStudents();
 }
@@ -73,15 +74,23 @@ function handleEdit() {
 // Tìm kiếm thông tin học viên
 function handleSearch() {
   let students = getData();
-  let studentResults = [];
+    let student1 
   let searchResult = document.querySelector(".students-list-infor");
   let inputSearch = document.querySelector(".search");
   let inputSearchValue = inputSearch.value.toLowerCase();
-    students.forEach((element) => {
-      if (element.name.toLowerCase() == inputSearchValue) {
-        studentResults.push(element);
-      }
-    });
-    searchResult.innerHTML = studentResults;
-  
+  students.forEach((element, index) => {
+    if (element.name.toLowerCase()== inputSearchValue) {
+      student1 = `<tr>
+          <td>${index + 1}</td>
+          <td>${element.name}</td>
+          <td>${element.email}</td>
+          <td>${element.phone}</td>
+          <td>${element.address}</td>
+          <td>${element.gender}</td>
+          <td><a href="#" class="edit-btn" onclick="handleEdit(${index})">edit</a><a href="#" onclick="handleDelete(${index})">delete</a></td>
+          <td></td>
+        </tr>`;
+    }
+  });
+  searchResult.innerHTML = student1;
 }

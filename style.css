@@ -1,0 +1,30 @@
+.students-infor-container {
+  width: 360px;
+  border: 1px solid grey;
+  padding: 30px 0 30px 0px;
+  border-radius: 9px;
+  margin: 40px 0 20px 50px;
+}
+.students-infor-container table tr th,
+td {
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+.students-infor-container table tr td button {
+  width: 120px;
+  height: 28px;
+}
+.students-list{ margin-left: 50px;}
+.students-list h2 {
+  text-align: center;
+  margin-bottom: 29px;
+}
+.students-list div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.students-list-infor thead tr th {border: 1px solid rgb(198, 196, 196); height: 27px;}
+.students-list-infor {border: 1px solid rgb(198, 196, 196);}
+.students-list-infor tr td{border: 1px solid rgb(198, 196,196);}
+.edit-btn {border-right: 1px solid  grey; margin-right: 10px; padding-right: 5px;}

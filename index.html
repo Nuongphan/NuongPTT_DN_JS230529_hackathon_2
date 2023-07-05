@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <script src="./main.js"></script> 
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="students-infor-container">
+      <table >
+        <tr>
+          <th></th>
+          <th>Thông tin học viên</th>
+        </tr>
+        <tr>
+          <td>Họ và tên</td>
+          <td>
+            <input id="name" required type="text" placeholder="Vui lòng nhập tên " />
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input id="email" type="email" placeholder="Vui lòng nhập Email " /></td>
+        </tr>
+        <tr>
+          <td>Số điện thoại</td>
+          <td>
+            <input id="phone"type="text" placeholder="Vui lòng nhập số điện thoại " />
+          </td>
+        </tr>
+        <tr>
+          <td>Quê quán</td>
+          <td>
+            <input id="address"
+              required
+              type="text"
+              placeholder="Vui lòng nhập địa chỉ quê quán "
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Giới tính</td>
+          <td  class="list-gender">
+           <input type="checkbox" value="Nam" name="gender" checked/> Nam 
+        <input type="checkbox" value="Nữ" name="gender" /> Nữ <br/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button id="btn" onclick="handleAdd()">Lưu lại</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="students-list">
+      <h2>Danh sách học viện</h2>
+      <div>
+        <span>Tìm kiếm học viên:</span><input type="text" class="search" /><button onclick="handleSearch()">
+          Search
+        </button>
+      </div>
+      <table >
+       <thead> <tr>
+          <th>STT</th>
+          <th>Họ và tên</th>
+          <th>Email</th>
+          <th>Điện Thoại</th>
+          <th>Địa chỉ</th>
+          <th>Gender</th>
+          <th>Hành động</th>
+          <th><button>Sắp xếp(alpha b)</button></th>
+        </tr></thead>
+        <tbody class="students-list-infor" >
+        <tr>
+          <td>1</td>
+          <td>rikkei</td>
+          <td>rikkei@gmail.com</td>
+          <td>0823688888</td>
+          <td>hà nội</td>
+          <td>nam</td>
+          <td><a href="#" class="edit-btn">edit</a><a href="#">delete</a></td>
+          <td></td>
+        </tr></tbody>
+      </table>
+    </div>
+     
+    <script src="./main.js"></script>
+  </body>
 </html>

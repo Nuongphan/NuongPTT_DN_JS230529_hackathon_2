@@ -1,0 +1,16 @@
+fieldset legend {
+  background-color: bisque;
+}
+ol {
+  display: grid;
+  row-gap: 17px;
+}
+ol li button {
+  margin: 10px;
+}
+.btn-add-update {
+  width: 250px;
+  display: grid;
+  grid-template-columns: repeat(1 1fr);
+  row-gap: 10px;
+}

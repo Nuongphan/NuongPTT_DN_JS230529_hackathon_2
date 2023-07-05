@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <script src="./main.js"></script>  
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bài 1</legend>
+      <input type="text" class="input-1" /><button onclick="bai_1()">
+        Kiểm tra
+      </button>
+      <p class="result_1"></p>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 2</legend>
+      <input type="text" class="input-2" /><button onclick="bai_2()">
+        In ra màn hình
+      </button>
+      <p class="result_2"></p>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 3</legend>
+      <label for=""> nhập số tiền:</label>
+      <input type="text" class="input-3" />
+      <label for=""> nhập số tháng muốn gửi:</label>
+      <input type="text" class="input-month" />
+      <button onclick="bai_3()">Tính lãi suất</button>
+      <p class="result_3"></p>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 4</legend>
+      <input type="text" class="input-4" /><button onclick="bai_4()">
+        Sắp xếp
+      </button>
+      <p class="result_4"></p>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 5</legend>
+      <div class="btn-add-update">
+        <label for="">Thêm nhân viên</label>
+        <input
+          class="input-employee"
+          type="text"
+          placeholder="Nhập tên nhân viên "
+        /><button onclick="handleAdd()">Add</button>
+        <br />
+        <label for=""> Update thông tin nhân viên</label>
+        <input
+          class="update-employees"
+          type="text"
+          placeholder="Nhập thông tin update"
+        />
+        <button onclick="handleUpdate()">Upadte</button>
+      </div>
+      <br />
+      <br />
+      <ol class="employees-container">
+        <li><button>Edit</button> <button>Delete</button></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </fieldset>
+    <script src="./main.js"></script>
+  </body>
 </html>

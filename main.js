@@ -52,23 +52,24 @@ function bai_3() {
 ////////////////////////////////////////////////////////////////
 // Bài 4: Sắp xếp các phần tử là số ở trong mảng theo thứ tự giảm dần
 function bai_4() {
-  const inputValue = document.querySelector(".input-4").value;
-  const arr = inputValue.split(",");
-  let arr1 = [];
-  let temp;
-  for (i = 0; i < arr.length; i++) {
-    for (j = i + 1; j < arr.length; j++) {
-      if (arr[i] < arr[j]) {
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-      }
-    }
-    arr1.push(arr[i]);
+     const arr = [1, 4, 10, 9, -12, 20, 15, 75, 3, 100, 2, 0, -1, -90, 1000];
+     let arr1 = [];
+     let temp;
+     for (i = 0; i < arr.length; i++) {
+       for (j = i + 1; j < arr.length; j++) {
+         if (arr[i] < arr[j]) {
+           temp = arr[i];
+           arr[i] = arr[j];
+           arr[j] = temp;
+         }
+       }
+       arr1.push(arr[i]);
+     }
+
+    console.log(arr1);
   }
-  const resultElement = document.querySelector(".result_4");
-  resultElement.innerHTML = arr1;
-}
+
+
 ////////////////////////////////////////////////////////////////
 // Bài 5:  Quản lý nhân viên CRUD
 let employees = ["Nguyễn Thiên Hưng", "Nguyễn Văn Toàn", "Nguyễn Thiên Hoa"];

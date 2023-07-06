@@ -65,8 +65,8 @@ function bai_4() {
        }
        arr1.push(arr[i]);
      }
-
-    console.log(arr1);
+  const resultElement = document.querySelector('.result_4')
+  resultElement.innerHTML = arr1
   }
 
 
